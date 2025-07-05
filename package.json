@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "A consolidated CSS script for Aurora CSS styles.",
   "source": "src/aurora.css",
+  "homepage": "https://github.com/owner/project#readme",
+  "url" : "https://ishashankkawle.github.io",
+  "repository": "https://github.com/ishashankkawle/Aurora-Fusion.git",
   "scripts": {
     "test": "echo \"No Test\"",
     "build": "parcel build"
   },
   "author": "Shashank Kawle",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "parcel": "^2.15.4"
   }
