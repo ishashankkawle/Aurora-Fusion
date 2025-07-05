@@ -1,0 +1,15 @@
+{
+  "name": "aurora-fusion",
+  "version": "1.0.0",
+  "description": "A consolidated CSS script for Aurora CSS styles.",
+  "source": "src/aurora.css",
+  "scripts": {
+    "test": "echo \"No Test\"",
+    "build": "parcel build"
+  },
+  "author": "Shashank Kawle",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}
