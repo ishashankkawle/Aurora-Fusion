@@ -1,18 +1,19 @@
 {
-  "name": "aurora-fusion",
-  "version": "1.0.1",
-  "description": "A consolidated CSS script for Aurora CSS styles.",
-  "source": "src/aurora.css",
-  "homepage": "https://github.com/owner/project#readme",
-  "url" : "https://ishashankkawle.github.io",
-  "repository": "https://github.com/ishashankkawle/Aurora-Fusion.git",
+  "name": "nextjs-template-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"No Test\"",
-    "build": "parcel build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "author": "Shashank Kawle",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "parcel": "^2.15.4"
+  "dependencies": {
+    "aurora-fusion": "^1.0.2",
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.7",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
