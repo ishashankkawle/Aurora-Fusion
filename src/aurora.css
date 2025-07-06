@@ -97,6 +97,9 @@
   --au-border-default : var(--au-lightgray-5);
   --au-border-sub : var(--au-darkgray-1);
 
+  --au-text-light : var(--au-white);
+  --au-text-dark : var(--au-black);
+
   --au-info : var(--au-cyan);
   --au-info-sub : var(--au-dark-blue);
   --au-info-tint : var(--au-cyan-tint);
@@ -121,6 +124,7 @@
   --au-font-base : "JetBrains Mono", monospace;
   --au-font-size-base : 12px;
   --au-font-size-sub : 11px;
+  --au-text-color-accent: var(--au-accent-default);
 }
 
 [au-protocol=rudra]
@@ -134,6 +138,9 @@
   --au-text-color-glow : var(--au-red);
   --au-border-default : var(--au-lightgray-5);
   --au-border-sub : var(--au-darkgray-1);
+
+  --au-text-light : var(--au-white);
+  --au-text-dark : var(--au-black);
 
   --au-info : var(--au-cyan);
   --au-info-sub : var(--au-dark-blue);
@@ -159,6 +166,7 @@
   --au-font-base : "JetBrains Mono", monospace;
   --au-font-size-base : 12px;
   --au-font-size-sub : 11px;
+  --au-text-color-accent: var(--au-accent-default);
 }
 
 [au-protocol=aranyak]
@@ -172,6 +180,9 @@
   --au-text-color-glow : var(--au-teal);
   --au-border-default : var(--au-lightgray-5);
   --au-border-sub : var(--au-darkgray-1);
+
+  --au-text-light : var(--au-white);
+  --au-text-dark : var(--au-black);
 
   --au-info : var(--au-cyan);
   --au-info-sub : var(--au-dark-blue);
@@ -193,15 +204,16 @@
   --au-accent-tint : var(--au-teal-tint);
   --au-accent-sub : var(--au-dark-teal);
   --au-accent-sub-tint : var(--au-dark-teal-tint);
-  
+
   --au-font-base : "JetBrains Mono", monospace;
   --au-font-size-base : 12px;
   --au-font-size-sub : 11px;
+  --au-text-color-accent: var(--au-accent-default);
 }
 
-/* === Scrollbar === */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -215,6 +227,36 @@
 /* ------------------------------------------- */
 /* UTILITIES */
 /* ------------------------------------------- */
+
+.border-solid {border: 1px solid var(--au-border-default);}
+.border-dashed {border: 1px dashed var(--au-border-default);}
+.border-dotted {border: 1px dotted var(--au-border-default);}
+.border-double {border: 3px double var(--au-border-default);}
+.border-none {border: none;}
+.border-thin {border-width: 1px;}
+.border-thick {border-width: 3px;}
+.border-sub {border-color: var(--au-border-sub);}
+.border-success {border-color: var(--au-success);}
+.border-danger {border-color: var(--au-danger);}
+.border-warning {border-color: var(--au-warning);}
+.border-info {border-color: var(--au-info);}
+.border-top {border-top: 1px solid var(--au-border-default);}
+.border-bottom {border-bottom: 1px solid var(--au-border-default);}
+.border-start {border-left: 1px solid var(--au-border-default);}
+.border-end {border-right: 1px solid var(--au-border-default);}
+
+.overflow-auto {overflow: auto !important}
+.overflow-x-auto {overflow-x: auto !important}
+.overflow-y-auto {overflow-y: auto !important}
+.overflow-hidden {overflow: hidden !important}
+.overflow-x-hidden {overflow-x: hidden !important}
+.overflow-y-hidden {overflow-y: hidden !important}
+.overflow-scroll {overflow: scroll !important}
+.overflow-x-scroll {overflow-x: scroll !important}
+.overflow-y-scroll {overflow-y: scroll !important}
+.overflow-none {overflow: clip !important}
+.overflow-x-none {overflow-x: clip !important}
+.overflow-y-none {overflow-y: clip !important}
 
 .rounded-0 { border-radius: 0 !important }
 .rounded-1 { border-radius: var(--au-border-radius-sm) !important }
@@ -261,13 +303,11 @@
 .rounded-start-circle { border-bottom-left-radius: 50% !important; border-top-left-radius: 50% !important }
 .rounded-start-pill { border-bottom-left-radius: var(--au-border-radius-pill) !important; border-top-left-radius: var(--au-border-radius-pill) !important }
 
-/* === SHADOW === */
 .shadow { box-shadow: var(--au-box-shadow) !important }
 .shadow-sm { box-shadow: var(--au-box-shadow-sm) !important }
 .shadow-lg { box-shadow: var(--au-box-shadow-lg) !important }
 .shadow-none { box-shadow: none !important }
 
-/* === MARGIN === */
 .m-0 { margin: 0 !important }
 .m-1 { margin: .25rem !important }
 .m-2 { margin: .5rem !important }
@@ -318,7 +358,6 @@
 .ms-5 { margin-left: 3rem !important }
 .ms-auto { margin-left: auto !important }
 
-/* === PADDING === */
 .p-0 { padding: 0 !important }
 .p-1 { padding: .25rem !important }
 .p-2 { padding: .5rem !important }
@@ -362,7 +401,6 @@
 .ps-4 { padding-left: 1.5rem !important }
 .ps-5 { padding-left: 3rem !important }
 
-/* === DISPLAY === */
 .d-flex { display: flex !important;}
 .d-block { display: block !important; }
 .d-inline-block { display: inline-block !important; }
@@ -372,7 +410,6 @@
 .flex-row { display: flex; flex-direction: row; gap: 8px; }
 .flex-column { display: flex; flex-direction: column; gap: 8px; }
 
-/* === ALIGNMENT === */
 .v-align-baseline { vertical-align: baseline !important }
 .v-align-top { vertical-align: top !important }
 .v-align-middle { vertical-align: middle !important }
@@ -410,6 +447,10 @@
 .text-start { text-align: left !important }
 .text-end { text-align: right !important }
 .text-center { text-align: center !important }
+
+/* ------------------------------------------- */
+/* UTILITIES END */
+/* ------------------------------------------- */
 
 body
 {
@@ -462,6 +503,8 @@ body
 .text-success { color: var(--au-success);}
 .text-warning { color: var(--au-warning);}
 .text-danger { color: var(--au-danger);}
+.text-info { color: var(--au-info);}
+.text-accent { color: var(--au-text-color-accent);}
 .text-neutral { color: var(--au-text-color-sub);}
 .text-glow {text-shadow: 0 0 10px var(--au-text-color-glow)}
 
@@ -480,6 +523,30 @@ body
   border-left: 2px solid var(--au-accent-default);
   padding: 4px 8px;
   margin: 8px 0;
+}
+.note-info
+{
+  border-left: 2px solid var(--au-info);
+  color: var(--au-info);
+  background-color: var(--au-info-tint);
+}
+.note-success
+{
+  border-left: 2px solid var(--au-success);
+  color: var(--au-success);
+  background-color: var(--au-success-tint);
+}
+.note-warning
+{
+  border-left: 2px solid var(--au-warning);
+  color: var(--au-warning);
+  background-color: var(--au-warning-tint);
+}
+.note-danger
+{
+  border-left: 2px solid var(--au-danger);
+  color: var(--au-danger);
+  background-color: var(--au-danger-tint);
 }
 
 .code
@@ -656,7 +723,7 @@ textarea::placeholder {
 
 select {
   background-color: var(--au-accent-sub);
-  color: var(--au-text-color-default);
+  color: var(--au-text-light);
   font-family: var(--au-font-base);
   font-size: var(--au-font-size-base);
   padding: 8px;
@@ -730,7 +797,6 @@ select > option {
 .range-label {
   font-family: var(--au-font-base);
   font-size: var(--au-font-size-base);
-  text-transform: uppercase;
 }
 
 .range-control {
