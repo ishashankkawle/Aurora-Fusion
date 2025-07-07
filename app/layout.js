@@ -1,11 +1,10 @@
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+// import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import 'aurora-fusion/dist/aurora.css'
+import '../node_modules/aurora-fusion/src/aurora.css'
 import Providers from './_providers/provider'
 import Script from "next/script";
 import Footer from "@/components/footer/footer";
-
-// const inter = JetBrains_Mono({ weight: '100', subsets: ['latin'] })
+import Navbar from "@/components/navbar/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -21,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" au-protocol="aranyak">
       <head>
         {/* ---------------------- GOOGLE ANALYTICS ----------------------- */}
         <Script async src={"https://www.googletagmanager.com/gtag/js?id=" + process.env.GOOGLE_ANALYTICS}/>
@@ -33,8 +32,9 @@ export default function RootLayout({ children }) {
         gtag('config', '` + process.env.GOOGLE_ANALYTICS + `');`}
         </Script>
       </head>
-      <body>
+      <body className="overflow-x-none">
         <Providers>
+          <Navbar />
           {children}
 
           <Footer/>
