@@ -729,10 +729,15 @@ input,
 select,
 textarea
 {
+  color: var(--au-text-light);
   border: 1px solid var(--au-border-default);
   background-color: var(--au-bg-sub);
   padding: 8px;
 }
+
+.input-sm,.select-sm,.textarea-sm{padding: 0 8px !important;}
+.input-lg,.select-lg,.textarea-lg {padding: 12px 8px !important;}
+
 
 select:focus,
 textarea:focus,
@@ -740,6 +745,7 @@ textarea:focus,
 [type=password]:focus,
 [type=email]:focus,
 [type=number]:focus {
+  color: var(--au-text-light);
   outline: none;
   border: 1px solid var(--au-accent-default)
 }
@@ -763,7 +769,7 @@ select {
   -moz-appearance: none;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='8'%20height='5'%20viewBox='0%200%208%205'%3E%3Cpath%20fill='%23ffffff'%20d='M0%200l4%205l4-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 8px center;
+  background-position: right 2px center;
   background-size: 8px 5px;
   padding-right: 28px;
   transition: background 0.2s ease-in-out;
@@ -1152,6 +1158,14 @@ table tbody tr:hover {
   align-items: center;
   background-color: var(--au-bg-dark);
   border: 1px solid var(--au-border-sub);
+  padding: 4px 16px;
+}
+.navbar-sm
+{
+  padding: 0 8px;
+}
+.navbar-lg
+{
   padding: 8px 16px;
 }
 .nav-brand {
@@ -1166,6 +1180,11 @@ table tbody tr:hover {
   margin: 0;
   padding: 0;
   gap: 20px;
+}
+.nav-links li
+{
+  display: flex;
+  align-items: center;
 }
 .nav-links li a {
   color: var(--au-text-color-default);
