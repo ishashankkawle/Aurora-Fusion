@@ -31,6 +31,10 @@ export default function RootLayout({ children }) {
         
         gtag('config', '` + process.env.GOOGLE_ANALYTICS + `');`}
         </Script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+      
       </head>
       <body className="overflow-x-none">
         <Providers>
@@ -39,6 +43,9 @@ export default function RootLayout({ children }) {
 
           <Footer/>
         </Providers>
+
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></Script>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></Script>
       </body>
     </html>
   );
