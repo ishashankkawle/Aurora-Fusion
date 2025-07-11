@@ -505,6 +505,11 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                         </div>
                     </div>
                 </div>
+                <p>By default, text will be aligned to right. You can use additional classes <code className="code">.table-left</code> and <code className="code">.table-center</code> to align the text as per requirements. Below is the useage example.</p>
+                <pre><code className="language-html">
+{`<table class="table table-left">
+<table class="table table-center">`}
+                </code></pre>
 
                 <h1>Badge</h1>
                 <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
@@ -757,7 +762,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Nav Bar</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>By default navbar will use space between to separate brandd and navbar links as shown in 1st example.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>
@@ -770,6 +775,24 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                                 <li><a href="#">Map</a></li>
                                 <li><a href="#">Fittings</a></li>
                             </ul>
+                        </nav>
+                        <nav class="navbar navbar-left">
+                            <div class="nav-brand me-4">NEOCOM</div>
+                            <ul class="nav-links">
+                                <li><a href="#">Overview</a></li>
+                                <li><a href="#">Fleet</a></li>
+                                <li><a href="#">Map</a></li>
+                                <li><a href="#">Fittings</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="navbar navbar-right">
+                            <ul class="nav-links">
+                                <li><a href="#">Overview</a></li>
+                                <li><a href="#">Fleet</a></li>
+                                <li><a href="#">Map</a></li>
+                                <li><a href="#">Fittings</a></li>
+                            </ul>
+                            <div class="nav-brand ms-4">NEOCOM</div>
                         </nav>
                     </div>
                     <div>
@@ -789,21 +812,32 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                         </div>
                     </div>
                 </div>
-
+                <p>You can define alignment as shown above by using <code className="code">.navbar-left</code> & <code className="code">.navbar-right</code> classes as shown below. Also, nav bars will have default background color rovided in theme. if you want to remove backround color, you can use <code className="code">.navbar-nobg</code> to make nav bar transparant.</p>
+                <pre><code className="language-html">
+{`<nav class="navbar navbar-left">">
+<nav class="navbar navbar-right">
+<nav class="navbar navbar-nobg">`}
+                </code></pre>
+                <span className="note">NOTE : Placenemt of items in navbar iss subjected to adding those items in navbar code</span>
 
                 <h1>Lists</h1>
                 <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
                 
                 <span className="text-xl text-accent">1. Default List</span>
-                <p>Aurora-Fusion supports all types of headings. Additionally you can use <code className="code">.h1</code> to  <code className="code">.h6</code> classes as well to specify header stylings to component. By default all headings will be in capitalized (Upper cased) format.</p>
+                <p>By default there will be no bullets for list item. <code className="code">.list-bullet</code> for default bullet style (square bullets). Bullets will have <b>accent</b> color by default.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
                         <span><b>Preview : </b></span>
-                            <ul class="list">
-                              <li class="list-item">Astero Covert Ops</li>
-                              <li class="list-item">Stratios Recon Vessel</li>
-                              <li class="list-item">Nestor Battleship</li>
+                            <ul className="list">
+                              <li className="list-item">Astero Covert Ops</li>
+                              <li className="list-item">Stratios Recon Vessel</li>
+                              <li className="list-item">Nestor Battleship</li>
+                            </ul>
+                            <ul className="list list-bullet">
+                              <li className="list-item">Astero Covert Ops</li>
+                              <li className="list-item">Stratios Recon Vessel</li>
+                              <li className="list-item">Nestor Battleship</li>
                             </ul>
                     </div>
                     <div>
@@ -819,8 +853,13 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                         </div>
                     </div>
                 </div>
+                <p>You can also use classes <code className="code">.list-bullet-circle</code> & <code className="code">.list-bullet-square</code> to define the type of bullets you want to use. </p>
+                <pre><code className="language-html">
+{`<ul class="list list-bullet-circle">
+<ul class="list list-bullet-square">`}
+                </code></pre>
                 <span className="text-xl text-accent">2. Hover List</span>
-                <p>Styling for common inline HTML5 paragraph text elements.</p>
+                <p>You can add hover effect to list item just by adding <code className="code">.list-item-hover</code> class. </p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -887,6 +926,176 @@ function activateWarpDrive()
                             <span><b>Code : </b></span>
                             <pre><code className="language-html">
 {`<a href="https://example.com" class="link" target="_blank" rel="noopener noreferrer"> Capsuleer Profile </a>`}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <h1>Tabs</h1>
+                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                
+                <span className="note"><b>NOTE</b> : For tabs to work properly and to maintain simplicity, Aurora-Fusion will only provide ability to create UI elements. You will need to add below code block modified as per your requirements.
+                    <pre className="code-block"><code>
+{`/*-----------------------
+DO NOT CHANGE BELOW CLASS CONTENTS
+-----------------------*/
+.tab-content
+{
+  display: none;
+}
+/*-----------------------*/
+
+.tabs:has(#tab-a-toggle:checked) #tab-a-content{
+  display: block;
+}
+.tabs:has(#tab-b-toggle:checked) #tab-b-content{
+  display: block;
+}
+.tabs:has(#tab-c-toggle:checked) #tab-c-content{
+  display: block;
+}
+.tabs-vertical:has(#tab-a-toggle-v:checked) #tab-a-content-v{
+  display: block;
+}
+.tabs-vertical:has(#tab-b-toggle-v:checked) #tab-b-content-v{
+  display: block;
+}
+.tabs-vertical:has(#tab-c-toggle-v:checked) #tab-c-content-v{
+  display: block;
+}`}
+                    </code> </pre>
+                You will need to replace element ids like <code className="code">#tab-a-toggle</code> as per your requirements and defined in code <br/><span className="mb-3"></span>
+                </span>
+
+                <span className="text-xl text-accent">1. Horizontal Tabs</span>
+                <p>By default there will be no bullets for list item. <code className="code">.list-bullet</code> for default bullet style (square bullets). Bullets will have <b>accent</b> color by default.</p>
+                <div className="panel flex-row justify-content-around">
+      
+                    <div className="flex-column" style={{width : '-webkit-fill-available'}}>
+                        <span><b>Preview : </b></span>
+                            <div className="tabs tabs-horizontal">  
+                              <nav className="tabs-menu">
+                                <label htmlFor="tab-a-toggle" className="tab-item">
+                                  <span>Tab A</span>
+                                  <input defaultChecked name="tabs-toggle" id="tab-a-toggle" type="radio" />
+                                </label>
+                                <label htmlFor="tab-b-toggle" className="tab-item">
+                                  <span>Tab B</span>
+                                  <input name="tabs-toggle" id="tab-b-toggle" type="radio" />
+                                </label>
+                                <label htmlFor="tab-c-toggle" className="tab-item">
+                                  <span>Tab C</span>
+                                  <input name="tabs-toggle" id="tab-c-toggle" type="radio" />
+                                </label>
+                              </nav>
+
+                              <div className="tab-content" id="tab-a-content">
+                                I am Tab A content
+                              </div>
+                              <div className="tab-content" id="tab-b-content">
+                                I am Tab B content
+                              </div>
+                              <div className="tab-content" id="tab-c-content">
+                                I am Tab C content
+                              </div>
+                            </div>
+                    </div>
+                    <div>
+                        <div className="flex-column">
+                            <span><b>Code : </b></span>
+                            <pre><code className="language-html">
+{`<div class="tabs tabs-horizontal">  
+  <nav class="tabs-menu">
+    <label for="tab-a-toggle" class="tab-item">
+      <span>Tab A</span>
+      <input checked name="tabs-toggle" id="tab-a-toggle" type="radio" />
+    </label>
+    <label for="tab-b-toggle" class="tab-item">
+      <span>Tab B</span>
+      <input name="tabs-toggle" id="tab-b-toggle" type="radio" />
+    </label>
+    <label for="tab-c-toggle" class="tab-item">
+      <span>Tab C</span>
+      <input name="tabs-toggle" id="tab-c-toggle" type="radio" />
+    </label>
+  
+  <div class="tab-content" id="tab-a-content">
+    I am Tab A content
+  </div>
+  <div class="tab-content" id="tab-b-content">
+    I am Tab B content
+  </div>
+  <div class="tab-content" id="tab-c-content">
+    I am Tab C content
+  </div>
+</div>`}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+                <span className="text-xl text-accent">2. Vertical Tabs</span>
+                <p>You can add hover effect to list item just by adding <code className="code">.list-item-hover</code> class. </p>
+                <div className="panel flex-row justify-content-around">
+      
+                    <div className="flex-column" style={{width : '-webkit-fill-available'}}>
+                        <span><b>Preview : </b></span>
+                            <div className="tabs tabs-vertical">  
+                              <nav className="tabs-menu">
+                                <label htmlFor="tab-a-toggle-v" className="tab-item">
+                                  <span>Tab A</span>
+                                  <input defaultChecked name="tabs-toggle-v" id="tab-a-toggle-v" type="radio" />
+                                </label>
+                                <label htmlFor="tab-b-toggle-v" className="tab-item">
+                                  <span>Tab B</span>
+                                  <input name="tabs-toggle-v" id="tab-b-toggle-v" type="radio" />
+                                </label>
+                                <label htmlFor="tab-c-toggle-v" className="tab-item">
+                                  <span>Tab C</span>
+                                  <input name="tabs-toggle-v" id="tab-c-toggle-v" type="radio" />
+                                </label>
+                              </nav>
+                    
+                              <div className="tab-content" id="tab-a-content-v">
+                                I am Tab A content
+                              </div>
+                              <div className="tab-content" id="tab-b-content-v">
+                                I am Tab B content
+                              </div>
+                              <div className="tab-content" id="tab-c-content-v">
+                                I am Tab C content
+                              </div>
+                            </div>
+                    </div>
+                    <div>
+                        <div className="flex-column">
+                            <span><b>Code : </b></span>
+                            <pre><code className="language-html">
+{`<div class="tabs tabs-vertical">  
+  <nav class="tabs-menu">
+    <label for="tab-a-toggle-v" class="tab-item">
+      <span>Tab A</span>
+      <input checked name="tabs-toggle-v" id="tab-a-toggle-v" type="radio" />
+    </label>
+    <label for="tab-b-toggle-v" class="tab-item">
+      <span>Tab B</span>
+      <input name="tabs-toggle-v" id="tab-b-toggle-v" type="radio" />
+    </label>
+    <label for="tab-c-toggle-v" class="tab-item">
+      <span>Tab C</span>
+      <input name="tabs-toggle-v" id="tab-c-toggle-v" type="radio" />
+    </label>
+  </nav>
+
+  <div class="tab-content" id="tab-a-content-v">
+    I am Tab A content
+  </div>
+  <div class="tab-content" id="tab-b-content-v">
+    I am Tab B content
+  </div>
+  <div class="tab-content" id="tab-c-content-v">
+    I am Tab C content
+  </div>
+</div>`}
                             </code></pre>
                         </div>
                     </div>

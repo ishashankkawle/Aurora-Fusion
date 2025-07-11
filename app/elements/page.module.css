@@ -1,0 +1,19 @@
+
+.tabs:has(#tab-a-toggle:checked) #tab-a-content{
+  display: block;
+}
+.tabs:has(#tab-b-toggle:checked) #tab-b-content{
+  display: block;
+}
+.tabs:has(#tab-c-toggle:checked) #tab-c-content{
+  display: block;
+}
+.tabs-vertical:has(#tab-a-toggle-v:checked) #tab-a-content-v{
+  display: block;
+}
+.tabs-vertical:has(#tab-b-toggle-v:checked) #tab-b-content-v{
+  display: block;
+}
+.tabs-vertical:has(#tab-c-toggle-v:checked) #tab-c-content-v{
+  display: block;
+}
