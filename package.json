@@ -1,7 +1,7 @@
 {
   "name": "aurora-fusion",
-  "version": "1.0.5",
-  "description": "A consolidated CSS script for Aurora CSS styles.",
+  "version": "1.0.6",
+  "description": "A consolidated CSS script for Aurora-Fusion CSS styles.",
   "source": "src/aurora.css",
   "homepage": "https://github.com/owner/project#readme",
   "url" : "https://ishashankkawle.github.io",
