@@ -746,7 +746,7 @@ textarea
 }
 
 .input-sm,.textarea-sm{padding: 0 8px !important;}
-.input-sm,.textarea-sm{padding: 0 8px !important;}
+.input-lg,.textarea-lg{padding: 12px 8px !important;}
 .select-sm {padding-top: 0 !important; padding-bottom: 0 !important;}
 .select-lg {padding-top: 12px !important; padding-bottom: 12px !important;}
 
@@ -920,12 +920,23 @@ table {
   border-collapse: collapse;
   background-color: transparent;
 }
+table,.table-right
+{
+  text-align: right !important;
+}
+.table-left
+{
+  text-align: left !important;
+}
+.table-center
+{
+  text-align: center !important;
+}
 
 table th {
   border-left: 1px solid var(--au-border-sub);
   border-right: 1px solid var(--au-border-sub);
   padding: 4px;
-  text-align: right;
   font-weight: bold;
 }
 
@@ -947,7 +958,7 @@ table td:last-child {
 
 table td {
   padding: 4px;
-  text-align: right;
+  /* text-align: right; */
   border-left: 1px solid var(--au-border-sub);
   border-right: 1px solid var(--au-border-sub);
 }
@@ -1279,6 +1290,7 @@ table tbody tr:hover {
 .tabs{
   display: flex;
   user-select: none;
+  flex-grow: 1;
 }
 .tabs,.tabs-horizontal
 {
@@ -1288,15 +1300,14 @@ table tbody tr:hover {
 {
   flex-direction: row;
 }
-.tabs-horizontal .tabs-menu
+.tabs-menu
 {
   display: inline-flex;
+  flex-shrink: 0;
   flex-direction: row;
 }
 .tabs-vertical .tabs-menu
 {
-  display: inline-flex;
-  flex-shrink: 0;
   flex-direction: column;
 }
 .tab-item{
@@ -1334,9 +1345,10 @@ table tbody tr:hover {
 .tab-content{
   padding: 12px;
   border: 1px solid var(--au-border-sub);
+  flex-grow: 1;
+  display: none;
 }
 .tabs-vertical .tab-content {
-  flex-grow: 1;
   width: 100%;
 }
 .tab-item input{
@@ -1347,24 +1359,4 @@ table tbody tr:hover {
   color: var(--au-accent-default);
   border: 1px solid var(--au-accent-default) !important;
 }
-.tab-content{
-  display: none;
-}
-.tabs:has(#tab-a-toggle:checked) #tab-a-content{
-  display: block;
-}
-.tabs:has(#tab-b-toggle:checked) #tab-b-content{
-  display: block;
-}
-.tabs:has(#tab-c-toggle:checked) #tab-c-content{
-  display: block;
-}
-.tabs-vertical:has(#tab-a-toggle-v:checked) #tab-a-content-v{
-  display: block;
-}
-.tabs-vertical:has(#tab-b-toggle-v:checked) #tab-b-content-v{
-  display: block;
-}
-.tabs-vertical:has(#tab-c-toggle-v:checked) #tab-c-content-v{
-  display: block;
-}
+
