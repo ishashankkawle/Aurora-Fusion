@@ -1,9 +1,9 @@
 {
   "name": "aurora-fusion",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A consolidated CSS Framework for Aurora-Fusion CSS styles. Aurora-Fusion redefines the dark terminal themed styles for futuristic desigs.",
   "source": "src/aurora.css",
-  "homepage": "https://github.com/owner/project#readme",
+  "homepage": "https://aurorafusion.netlify.app/",
   "url" : "https://ishashankkawle.github.io",
   "repository": "https://github.com/ishashankkawle/Aurora-Fusion.git",
   "scripts": {
@@ -24,5 +24,14 @@
      "type": "Sponsor",
      "url": "https://github.com/sponsors/ishashankkawle?o=esb"
    }
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "utility-first",
+    "aurora",
+    "fusion",
+    "design-system",
+    "web-components"
   ]
 }
