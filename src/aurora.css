@@ -227,9 +227,31 @@
 /* ------------------------------------------- */
 /* UTILITIES */
 /* ------------------------------------------- */
+.w-10 {width: 10% !important}
+.w-20 {width: 20% !important}
+.w-25 {width: 25% !important}
+.w-30 {width: 30% !important}
+.w-40 {width: 40% !important}
+.w-50 {width: 50% !important}
+.w-60 {width: 60% !important}
+.w-70 {width: 70% !important}
+.w-75 {width: 75% !important}
+.w-80 {width: 80% !important}
+.w-90 {width: 90% !important}
+.w-100 {width: 100% !important}
 
-.float-start {float: left !important}
-.float-end {float: right !important}
+.h-10 {height: 10% !important}
+.h-20 {height: 20% !important}
+.h-25 {height: 25% !important}
+.h-30 {height: 30% !important}
+.h-40 {height: 40% !important}
+.h-50 {height: 50% !important}
+.h-60 {height: 60% !important}
+.h-70 {height: 70% !important}
+.h-75 {height: 75% !important}
+.h-80 {height: 80% !important}
+.h-90 {height: 90% !important}
+.h-100 {height: 100% !important}
 
 .fixed-top { position: fixed; top: 0; right: 0; left: 0;}
 .fixed-bottom {position: fixed;right: 0;bottom: 0;left: 0;}
@@ -439,6 +461,8 @@
 
 .flex-row { display: flex; flex-direction: row; gap: 8px; }
 .flex-column { display: flex; flex-direction: column; gap: 8px; }
+.float-start {float: left !important}
+.float-end {float: right !important}
 
 .v-align-baseline { vertical-align: baseline !important }
 .v-align-top { vertical-align: top !important }
@@ -478,42 +502,6 @@
 .text-end { text-align: right !important }
 .text-center { text-align: center !important }
 
-/* ------------------------------------------- */
-/* UTILITIES END */
-/* ------------------------------------------- */
-
-body
-{
-  background-color: var(--au-bg-default);
-  color: var(--au-text-color-default);
-  width: 100dvw;
-  height: 100dvh;
-  font-family: var(--au-font-base);
-  font-size: var(--au-font-size-base);
-  margin: 0%;
-  padding: 0%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* === WINDOW === */
-.panel {
-  background-color: var(--au-bg-sub);
-  border: 1px solid var(--au-border-sub);
-  padding: 16px;
-  margin: 20px;
-}
-
-.acrylic
-{
-  border: none;
-  background-color: transparent;
-  -webkit-backdrop-filter: blur(50px);
-  backdrop-filter: blur(50px);
-}
-
-
-/* === TYPOGRAPHY === */
 .text-xs    { font-size: 8px; }
 .text-sm    { font-size: 10px; }
 .text-lg    { font-size: 16px; }
@@ -539,12 +527,40 @@ body
 .text-neutral { color: var(--au-text-color-sub);}
 .text-glow {text-shadow: 0 0 10px var(--au-text-color-glow)}
 .text-clear {text-decoration: none !important;}
+.text-subbed { font-size: var(--aufont-size-subbed);  color: var(--au-text-color-sub); text-transform: uppercase; letter-spacing: 0.5px;
+}
 
-.text-subbed {
-  font-size: var(--aufont-size-subbed); 
-  color: var(--au-text-color-sub);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+/* ------------------------------------------- */
+/* UTILITIES END */
+/* ------------------------------------------- */
+
+body
+{
+  background-color: var(--au-bg-default);
+  color: var(--au-text-color-default);
+  width: 100dvw;
+  height: 100dvh;
+  font-family: var(--au-font-base);
+  font-size: var(--au-font-size-base);
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  background-color: var(--au-bg-sub);
+  border: 1px solid var(--au-border-sub);
+  padding: 16px;
+  margin: 20px;
+}
+
+.acrylic
+{
+  border: none;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
 }
 
 .note
@@ -606,7 +622,6 @@ h6,.h6
   font-size: xx-small;
 }
 
-/* === BUTTON === */
 .button
 {
   background-color: var(--au-accent-sub);
@@ -700,7 +715,6 @@ h6,.h6
   border: 1px solid var(--au-danger);
 }
 
-/* === BUTTON GROUP === */
 .button-group
 {
   display: flex;
@@ -721,8 +735,6 @@ h6,.h6
   border: 1px solid var(--au-border-default);
   color: var(--au-accent-default);
 }
-
-/* === Close Button === */
 .button-close
 {
   color: var(--au-text-color-default);
@@ -734,7 +746,6 @@ h6,.h6
   transition: border 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* === Input Fields === */
 input,
 select,
 textarea
@@ -835,7 +846,6 @@ select > option {
   box-sizing: border-box;
 }
 
-/* === Range === */
 .range {
   display: flex;
   flex-direction: column;
@@ -878,7 +888,6 @@ select > option {
 /* Firefox */
 .range-control::-moz-range-track {
   height: 8px;
-  /* background: #1a1a1a; */
   border: 1px solid var(--au-border-sub);
 }
 .range-control::-moz-range-progress {
@@ -914,7 +923,6 @@ select > option {
   font-size: var(--au-font-size-sub);
 }
 
-/* === Table UI === */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -967,7 +975,6 @@ table tbody tr:hover {
   background-color: var(--au-bg-light);
 }
 
-/* === Badge === */
 .badge {
   display: inline-flex;
   padding: 4px 8px;
@@ -983,8 +990,6 @@ table tbody tr:hover {
 .badge-danger { color: var(--au-danger);}
 .badge-neutral { color: var(--au-text-color-sub);}
 
-
-/* === Card === */
 .card {
   background: var(--au-bg-sub);
   border: 1px solid var(--au-border-sub);
@@ -1041,13 +1046,11 @@ table tbody tr:hover {
   background-color: var(--au-danger-tint);
 }
 
-/* === Breadcrum === */
 .breadcrumb {
   list-style: none;
   display: flex;
   align-items: center;
   padding: 8px 0px;
-  /* border: 1px solid #2a2a2a; */
   margin: 0;
   gap: 0;
 }
@@ -1077,7 +1080,6 @@ table tbody tr:hover {
   color: var(--au-text-color-default);
 }
 
-/* === Toast === */
 .toast {
   display: flex;
   align-items: center;
@@ -1126,7 +1128,6 @@ table tbody tr:hover {
   transition: color 0.2s ease-in-out;
 }
 
-/* === Progress === */
 .progress {
   width: 100%;
   height: 10px;
@@ -1140,7 +1141,6 @@ table tbody tr:hover {
   transition: width 0.3s ease;
 }
 
-/* === Block Quotes === */
 .quote {
   display: flex;
   align-items: flex-start;
@@ -1174,7 +1174,6 @@ table tbody tr:hover {
   text-transform: uppercase;
 }
 
-/* === Nav Bar === */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -1232,7 +1231,6 @@ table tbody tr:hover {
   background: var(--au-accent-sub);
 }
 
-/* === List === */
 .list {
   list-style: none;
   margin: 0;
@@ -1261,7 +1259,6 @@ table tbody tr:hover {
   color: var(--au-accent-default);
 }
 
-/* === Code Block === */
 .code-block {
   background-color: var(--au-bg-dark);
   color: var(--au-accent-default);
@@ -1274,7 +1271,6 @@ table tbody tr:hover {
   line-height: 1.6;
 }
 
-/* === Link === */
 .link {
   text-decoration: none;
   border-bottom: 1px dashed var(--au-accent-default);
@@ -1285,7 +1281,6 @@ table tbody tr:hover {
   color: var(--au-accent-default);
   border-bottom-color: var(--au-accent-sub);
 }
-
 
 .tabs{
   display: flex;
@@ -1359,4 +1354,3 @@ table tbody tr:hover {
   color: var(--au-accent-default);
   border: 1px solid var(--au-accent-default) !important;
 }
-
