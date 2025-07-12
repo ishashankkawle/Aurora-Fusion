@@ -32,6 +32,11 @@ export default function Home() {
         <span className="text-xl text-accent mt-3">CDN</span>
         <span>Use below code to import Aurora-Fusion styles directly through CDN.</span>
         <code className="p-2 code">&lt;link href="https://cdn.jsdelivr.net/npm/aurora-fusion@latest/dist/aurora.css" /&gt;</code>
+
+        <br/>
+      
+        <h1 className="text-glow">Contribute</h1>
+        <p>You can contribute to project by creating pull request to this project : <span className="badge badge-warning"><a href="https://github.com/ishashankkawle/Aurora-Fusion" target="blank" className="link">Aurora-Fusion@main</a> </span></p>
       </div>
     </div>
   );
