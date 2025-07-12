@@ -6,10 +6,10 @@ export const GlobalContext = createContext()
 
 const  GlobalProvider = ({children}) => {
     
-    const [isLoading, setLoadingState] = useState(false);
+    const [protocol, setProtocol] = useState("aranyak");
 
     return(
-        <GlobalContext.Provider value={{isLoading , setLoadingState}}>
+        <GlobalContext.Provider value={{protocol , setProtocol}}>
             {children}
         </GlobalContext.Provider> 
     )

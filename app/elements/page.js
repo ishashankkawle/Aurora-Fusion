@@ -1,10 +1,15 @@
 'use client';
 import styles from "./page.module.css";
+import { useContext } from "react";
+import { GlobalContext } from "@/app/_context/GlobalContext";
+
 
 export default function Elements() {
 
+    const {protocol} = useContext(GlobalContext);
+
     return (
-        <div className="p-5">
+        <div className="p-5"  au-protocol={protocol}>
             <div className="flex-column">
                 <span className="text-3xl text-accent text-glow">Elements</span>
                 <p>Aurora-Fusion provides all necessary web elements tweaked to match the base theme and provides consistent user experieence. Below is te list of different elements present in Aurora-Fusion and code snippet on how you can use them as per your requirements. All these elements are re-configurable and designed do support dark backgrounds.</p>
@@ -32,7 +37,7 @@ export default function Elements() {
                 </div>
                 
                 <h1>Typography</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Aurora-Fusion provides verious typographical styles to handle any required text enhancements. Typography in this framework is designed to ensure visual harmony, readability, and adaptability across all devices. It establishes a clear hierarchy through scalable font sizes, balanced spacing, and consistent line heights. Carefully chosen font styles and weights enhance clarity while maintaining a cohesive aesthetic throughout the interface.</p>
                 
                 <span className="text-xl text-accent">1. Headers</span>
                 <p>Aurora-Fusion supports all types of headings. Additionally you can use <code className="code">.h1</code> to  <code className="code">.h6</code> classes as well to specify header stylings to component. By default all headings will be in capitalized (Upper cased) format.</p>
@@ -192,7 +197,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Buttons Styles</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Buttons are crafted to be visually consistent, responsive, and intuitive across all use cases. They feature balanced padding, clear labeling, and distinct states for hover, focus, and disabled interactions. The design emphasizes accessibility and touch-friendly dimensions while supporting both solid and subtle button variants.</p>
                 
                 <span className="text-xl text-accent">1. Button</span>
                 <p>Buttons provide clear, actionable triggers for users to interact with your interface. Consistent styling and intuitive placement ensure actions are easy to find and perform.</p>
@@ -277,7 +282,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                     </div>
                 </div>
                 <span className="text-xl text-accent">3. Close Button</span>
-                <p>Buttons provide clear, actionable triggers for users to interact with your interface. Consistent styling and intuitive placement ensure actions are easy to find and perform.</p>
+                <p>Cloe button can be added to any element to justify closing operation. Aurora-Fusion provides standard close button design out of the box.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -295,9 +300,9 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Form Controls</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Aurora-Fusion's form controls are built for clarity, consistency, and ease of interaction across all components. Inputs, selects, and textareas follow a unified visual language with balanced spacing, subtle borders, and clear focus states. Each element is crafted to maintain accessibility and aesthetic alignment within the overall design system.</p>
                 <span className="text-xl text-accent">1. Input</span>
-                <p>Buttons provide clear, actionable triggers for users to interact with your interface. Consistent styling and intuitive placement ensure actions are easy to find and perform.</p>
+                <p>Inputs in Aurora-Fusion are clean, minimal, and easy to interact with. They feature consistent padding, clear focus outlines, and seamless integration with surrounding UI elements.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -320,7 +325,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                     </div>
                 </div>
                 <span className="text-xl text-accent">2. Select Dropdowns</span>
-                <p>Buttons provide clear, actionable triggers for users to interact with your interface. Consistent styling and intuitive placement ensure actions are easy to find and perform.</p>
+                <p>Select dropdowns in Aurora-Fusion are styled for clarity and ease of use, maintaining visual consistency with other form elements. They feature balanced spacing, smooth interactions, and clearly defined states for selection and focus.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -378,7 +383,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                     </div>
                 </div>
                 <span className="text-xl text-accent">3. Checkbox</span>
-                <p>Buttons provide clear, actionable triggers for users to interact with your interface. Consistent styling and intuitive placement ensure actions are easy to find and perform.</p>
+                <p>Checkboxes in Aurora-Fusion are clean and minimal, aligning seamlessly with the overall form design.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -403,7 +408,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                     </div>
                 </div>
                 <span className="text-xl text-accent">3. Range</span>
-                <p>Buttons provide clear, actionable triggers for users to interact with your interface. Consistent styling and intuitive placement ensure actions are easy to find and perform.</p>
+                <p>Range sliders are styled with smooth handles and intuitive track visuals for precise input control.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -429,7 +434,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Table</h1>
-                <p>Tables present structured data in a clear, organized format, making it easy to compare and analyze information. Consistent styling ensures tables remain readable and accessible across devices.</p>
+                <p>Tables in Aurora-Fusion are designed for readability, structure, and clean data presentation. They use consistent spacing, clear headers, and subtle borders to distinguish rows and columns. The styling ensures alignment with the overall visual language without overwhelming the content.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>
@@ -512,7 +517,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </code></pre>
 
                 <h1>Badge</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Badges in Aurora-Fusion offer concise visual indicators for counts, labels, or statuses. They are compact, well-aligned, and designed to integrate seamlessly with surrounding elements. Their simple styling ensures clarity without drawing unnecessary attention.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -540,7 +545,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Card</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Cards in Aurora-Fusion provide a structured container for organizing content and interactive elements. They feature clean layout boundaries, balanced spacing, and support optional sections like headers or footers. The design maintains a cohesive look while enhancing content separation.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -596,7 +601,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Alerts</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Built with the design principles of Aurora-Fusion, alerts deliver messages in a clear and unobtrusive manner. Their structured layout and consistent styling ensure important information stands out without disrupting the user experience. Each alert fits seamlessly within the broader visual language of the framework.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -622,7 +627,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Breadcrumb</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Inspired by Aurora-Fusion’s clean design philosophy, breadcrumbs provide users with clear navigation context and hierarchy. They feature structured spacing and intuitive separators, making multi-level paths easy to follow. Their streamlined styling ensures smooth integration into any layout without visual clutter.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -650,7 +655,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Toast</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Aligned with Aurora-Fusion's minimalist design approach, toasts offer brief, non-intrusive notifications that appear and dismiss smoothly. Their layout ensures messages are easy to scan without interrupting ongoing tasks. Consistent spacing and structure allow them to blend seamlessly into the overall interface.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -706,7 +711,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Progress</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Reflecting Aurora-Fusion's streamlined aesthetic, progress bars visually indicate task completion in a clean and unobtrusive manner. They maintain consistent dimensions and spacing to align with surrounding elements. The design ensures clarity without drawing focus away from primary content.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>
@@ -728,7 +733,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Quotes</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Aurora-Fusion styles quotes to highlight referenced or spoken content with subtle emphasis and clarity. Clean typography and balanced spacing ensure they stand out without breaking the visual rhythm. Their design integrates naturally into both narrative and functional layouts.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>
@@ -762,7 +767,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 </div>
 
                 <h1>Nav Bar</h1>
-                <p>By default navbar will use space between to separate brandd and navbar links as shown in 1st example.</p>
+                <p>The Navbar in Aurora-Fusion is designed for clarity, structure, and effortless navigation across pages or sections. Its layout supports brand identity, links, and interactive elements without overwhelming the interface. Consistent spacing and alignment ensure it anchors the top of the UI with stability and elegance.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>
@@ -776,23 +781,23 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                                 <li><a href="#">Fittings</a></li>
                             </ul>
                         </nav>
-                        <nav class="navbar navbar-left">
-                            <div class="nav-brand me-4">NEOCOM</div>
-                            <ul class="nav-links">
+                        <nav className="navbar navbar-left">
+                            <div className="nav-brand me-4">NEOCOM</div>
+                            <ul className="nav-links">
                                 <li><a href="#">Overview</a></li>
                                 <li><a href="#">Fleet</a></li>
                                 <li><a href="#">Map</a></li>
                                 <li><a href="#">Fittings</a></li>
                             </ul>
                         </nav>
-                        <nav class="navbar navbar-right">
-                            <ul class="nav-links">
+                        <nav className="navbar navbar-right">
+                            <ul className="nav-links">
                                 <li><a href="#">Overview</a></li>
                                 <li><a href="#">Fleet</a></li>
                                 <li><a href="#">Map</a></li>
                                 <li><a href="#">Fittings</a></li>
                             </ul>
-                            <div class="nav-brand ms-4">NEOCOM</div>
+                            <div className="nav-brand ms-4">NEOCOM</div>
                         </nav>
                     </div>
                     <div>
@@ -821,7 +826,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
                 <span className="note">NOTE : Placenemt of items in navbar iss subjected to adding those items in navbar code</span>
 
                 <h1>Lists</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Lists in Aurora-Fusion are styled for clarity, readability, and structural consistency across content types. Whether ordered or unordered, they maintain balanced spacing and alignment to support easy scanning. Their minimal design ensures they integrate seamlessly within various layout contexts.</p>
                 
                 <span className="text-xl text-accent">1. Default List</span>
                 <p>By default there will be no bullets for list item. <code className="code">.list-bullet</code> for default bullet style (square bullets). Bullets will have <b>accent</b> color by default.</p>
@@ -886,7 +891,7 @@ Set <code class="code">warp : 154.125 0.242 35.120</code> as your next coordinat
 
 
                 <h1>Code Block</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Styled with the developer-friendly approach of the Aurora-Fusion framework, code blocks offer a clean and readable format for presenting syntax. Monospaced typography and structured spacing ensure clarity in both short snippets and longer sections. Their design supports technical content without disrupting the overall visual flow.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -914,7 +919,7 @@ function activateWarpDrive()
                 </div>
 
                 <h1>Links</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Links follow Aurora-Fusion's emphasis on clarity and subtle interaction, making navigation intuitive and accessible. They are styled to stand out just enough for discoverability without breaking visual consistency. Careful attention to spacing and typography ensures they integrate naturally within text and UI components.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column">
@@ -932,20 +937,11 @@ function activateWarpDrive()
                 </div>
 
                 <h1>Tabs</h1>
-                <p>Panels are reusable containers for grouping related interface elements and content within a distinct, visually separated block. They provide a flexible, consistent way to present information while maintaining clarity and hierarchy in a futuristic dark theme. Use panels to structure dashboards, sidebars, or modular content layouts for an intuitive and cohesive user experience.</p>
+                <p>Tabs in Aurora-Fusion provide a clean and organized way to switch between related views or content areas. Their layout ensures smooth interaction and visual consistency across different sections. Designed with modularity in mind, they align seamlessly with the overall structure of the framework.</p>
                 
                 <span className="note"><b>NOTE</b> : For tabs to work properly and to maintain simplicity, Aurora-Fusion will only provide ability to create UI elements. You will need to add below code block modified as per your requirements.
                     <pre className="code-block"><code>
-{`/*-----------------------
-DO NOT CHANGE BELOW CLASS CONTENTS
------------------------*/
-.tab-content
-{
-  display: none;
-}
-/*-----------------------*/
-
-.tabs:has(#tab-a-toggle:checked) #tab-a-content{
+{`.tabs:has(#tab-a-toggle:checked) #tab-a-content{
   display: block;
 }
 .tabs:has(#tab-b-toggle:checked) #tab-b-content{
@@ -968,7 +964,7 @@ DO NOT CHANGE BELOW CLASS CONTENTS
                 </span>
 
                 <span className="text-xl text-accent">1. Horizontal Tabs</span>
-                <p>By default there will be no bullets for list item. <code className="code">.list-bullet</code> for default bullet style (square bullets). Bullets will have <b>accent</b> color by default.</p>
+                <p>Horizontal tabs in Aurora-Fusion are structured in a single row layout, offering intuitive navigation across adjacent content sections.</p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>
@@ -1034,7 +1030,7 @@ DO NOT CHANGE BELOW CLASS CONTENTS
                     </div>
                 </div>
                 <span className="text-xl text-accent">2. Vertical Tabs</span>
-                <p>You can add hover effect to list item just by adding <code className="code">.list-item-hover</code> class. </p>
+                <p>Vertical tabs in Aurora-Fusion stack content controls in a column layout, enabling efficient navigation within confined or sidebar spaces. </p>
                 <div className="panel flex-row justify-content-around">
       
                     <div className="flex-column" style={{width : '-webkit-fill-available'}}>

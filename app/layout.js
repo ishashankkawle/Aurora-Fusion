@@ -3,8 +3,9 @@ import "./globals.css";
 import '../node_modules/aurora-fusion/src/aurora.css'
 import Providers from './_providers/provider'
 import Script from "next/script";
-import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -19,6 +20,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  
+
   return (
     <html lang="en" au-protocol="aranyak">
       <head>
@@ -39,9 +43,8 @@ export default function RootLayout({ children }) {
       <body className="overflow-x-none">
         <Providers>
           <Navbar />
-          {children}
-
-          <Footer/>
+            { children }
+          <Footer />
         </Providers>
 
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></Script>
