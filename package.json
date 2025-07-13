@@ -1,6 +1,6 @@
 {
   "name": "aurora-fusion",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A consolidated CSS Framework for Aurora-Fusion CSS styles. Aurora-Fusion redefines the dark terminal themed styles for futuristic desigs.",
   "source": "src/aurora.css",
   "homepage": "https://aurorafusion.netlify.app/",
